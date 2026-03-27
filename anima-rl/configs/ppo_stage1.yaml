@@ -1,0 +1,22 @@
+# PPO hyperparameters — Stage 1 (add sleep/fatigue, cortisol penalty)
+policy: MlpPolicy
+curriculum_stage: 1
+timesteps: 1000000
+n_envs: 8
+max_steps_per_episode: 4000
+load_from: models/stage0_final
+
+policy_kwargs:
+  net_arch: [256, 256]
+
+ppo:
+  learning_rate: 1.0e-4
+  n_steps: 2048
+  batch_size: 128
+  n_epochs: 10
+  gamma: 0.995
+  gae_lambda: 0.95
+  clip_range: 0.1
+  ent_coef: 0.005
+  vf_coef: 0.5
+  max_grad_norm: 0.5

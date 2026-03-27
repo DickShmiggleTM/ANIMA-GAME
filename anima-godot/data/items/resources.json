@@ -1,0 +1,71 @@
+{
+  "resources": [
+    {
+      "id": "berry_purple",
+      "type": "food",
+      "display_name": "Purple Berry",
+      "nutrition_value": 0.25,
+      "hydration_value": 0.05,
+      "toxin_risk": 0.02,
+      "regen_time_s": 20,
+      "color": [0.6, 0.1, 0.8]
+    },
+    {
+      "id": "berry_red",
+      "type": "food",
+      "display_name": "Red Berry",
+      "nutrition_value": 0.15,
+      "hydration_value": 0.03,
+      "toxin_risk": 0.0,
+      "regen_time_s": 15,
+      "color": [0.9, 0.1, 0.1]
+    },
+    {
+      "id": "mushroom_brown",
+      "type": "food",
+      "display_name": "Brown Mushroom",
+      "nutrition_value": 0.35,
+      "hydration_value": 0.1,
+      "toxin_risk": 0.1,
+      "regen_time_s": 45,
+      "color": [0.5, 0.3, 0.1]
+    },
+    {
+      "id": "fresh_water",
+      "type": "water",
+      "display_name": "Fresh Water",
+      "nutrition_value": 0.0,
+      "hydration_value": 0.3,
+      "toxin_risk": 0.0,
+      "regen_time_s": 60,
+      "color": [0.1, 0.4, 1.0]
+    },
+    {
+      "id": "puddle",
+      "type": "water",
+      "display_name": "Rainwater Puddle",
+      "nutrition_value": 0.0,
+      "hydration_value": 0.15,
+      "toxin_risk": 0.05,
+      "regen_time_s": 0,
+      "color": [0.2, 0.5, 0.9],
+      "spawned_by_weather": "rain"
+    },
+    {
+      "id": "wood_bundle",
+      "type": "material",
+      "display_name": "Wood Bundle",
+      "crafting_use": ["shelter", "fire"],
+      "regen_time_s": 90,
+      "color": [0.4, 0.25, 0.1]
+    },
+    {
+      "id": "stone",
+      "type": "material",
+      "display_name": "Stone",
+      "crafting_use": ["fire_pit", "tool"],
+      "regen_time_s": 0,
+      "color": [0.5, 0.5, 0.5]
+    }
+  ]
+}

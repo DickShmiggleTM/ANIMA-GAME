@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://zoi_scene"]
+
+[ext_resource type="Script" path="res://scripts/zoi/zoi_node.gd" id="1_zoi"]
+[ext_resource type="Script" path="res://scripts/zoi/zoi_animation.gd" id="2_anim"]
+[ext_resource type="Script" path="res://scripts/zoi/zoi_debug_overlay.gd" id="3_debug"]
+
+[sub_resource type="BoxMesh" id="body_mesh"]
+size = Vector3(0.6, 1.0, 0.4)
+
+[sub_resource type="BoxMesh" id="head_mesh"]
+size = Vector3(0.5, 0.5, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="zoi_mat"]
+albedo_color = Color(0.4, 0.6, 0.3, 1)
+roughness = 0.8
+
+[sub_resource type="CapsuleShape3D" id="collision_shape"]
+radius = 0.35
+height = 1.4
+
+[node name="ZoiNode" type="CharacterBody3D"]
+script = ExtResource("1_zoi")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("body_mesh")
+surface_material_override/0 = SubResource("zoi_mat")
+cast_shadow = 1
+
+[node name="Head" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("head_mesh")
+surface_material_override/0 = SubResource("zoi_mat")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("collision_shape")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.5
+target_desired_distance = 0.5
+avoidance_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+script = ExtResource("2_anim")
+
+[node name="SensorArea" type="Area3D" parent="."]
+
+[node name="SensorShape" type="CollisionShape3D" parent="SensorArea"]
+
+[node name="DebugOverlay" type="Node3D" parent="."]
+script = ExtResource("3_debug")
+visible = false
+
+[node name="ThoughtBubble" type="Label3D" parent="DebugOverlay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+text = ""
+font_size = 12
+billboard = 2
+no_depth_test = true
+
+[node name="NeedsBar" type="Node3D" parent="DebugOverlay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)

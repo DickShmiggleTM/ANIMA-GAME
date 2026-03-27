@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "description": "Proto-language token definitions. Meaning is grounded by agent associations, not hard-coded.",
+  "tokens": [
+    {"id": 0,  "initial_context": "food_nearby",    "vocalization": "chirp_high"},
+    {"id": 1,  "initial_context": "water_nearby",   "vocalization": "trill_low"},
+    {"id": 2,  "initial_context": "danger_predator","vocalization": "bark_sharp"},
+    {"id": 3,  "initial_context": "danger_weather", "vocalization": "moan_long"},
+    {"id": 4,  "initial_context": "greeting",       "vocalization": "click_double"},
+    {"id": 5,  "initial_context": "distress",       "vocalization": "wail"},
+    {"id": 6,  "initial_context": "affection",      "vocalization": "hum_soft"},
+    {"id": 7,  "initial_context": "territory",      "vocalization": "growl"},
+    {"id": 8,  "initial_context": "share_food",     "vocalization": "chirp_soft"},
+    {"id": 9,  "initial_context": "sleep_call",     "vocalization": "whistle_low"},
+    {"id": 10, "initial_context": "build_invite",   "vocalization": "tap_rhythm"},
+    {"id": 11, "initial_context": "play",           "vocalization": "giggle"}
+  ],
+  "divergence_enabled": true,
+  "dialect_radius": 15.0,
+  "association_learning_rate": 0.05
+}

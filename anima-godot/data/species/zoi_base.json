@@ -1,0 +1,32 @@
+{
+  "species_id": "zoi",
+  "display_name": "Zoi",
+  "description": "Small hobgoblin-like creature, ~3ft tall. Curious, social, adaptive.",
+  "body_params": {
+    "energy_decay_rate":    0.0004,
+    "hydration_decay_rate": 0.0005,
+    "metabolic_rate_base":  1.0,
+    "body_temp_baseline":   37.0,
+    "insulation_base":      0.5,
+    "injury_recovery_rate": 0.0001,
+    "lifespan_ticks_max":   216000
+  },
+  "action_space": [
+    "idle", "eat", "drink", "rest", "wander",
+    "socialize", "flee", "build", "share", "call"
+  ],
+  "onnx_model": "res://data/models/zoi_baseline_policy.onnx",
+  "genetics": {
+    "mutable_traits": [
+      "metabolic_rate", "insulation", "fertility",
+      "social_affinity", "fear_threshold", "curiosity"
+    ],
+    "mutation_rate": 0.05,
+    "crossover_enabled": true
+  },
+  "social": {
+    "max_relationships": 64,
+    "imitation_radius":  10.0,
+    "language_tokens":   32
+  }
+}
