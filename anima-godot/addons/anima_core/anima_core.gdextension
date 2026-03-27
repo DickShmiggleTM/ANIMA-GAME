@@ -1,0 +1,16 @@
+[configuration]
+entry_symbol = "anima_core_init"
+compatibility_minimum = "4.1"
+reloadable = false
+
+[libraries]
+linux.debug.x86_64     = "res://addons/anima_core/bin/libanimacoreextension.linux.debug.x86_64.so"
+linux.release.x86_64   = "res://addons/anima_core/bin/libanimacoreextension.linux.release.x86_64.so"
+windows.debug.x86_64   = "res://addons/anima_core/bin/libanimacoreextension.windows.debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/anima_core/bin/libanimacoreextension.windows.release.x86_64.dll"
+macos.debug             = "res://addons/anima_core/bin/libanimacoreextension.macos.debug.framework"
+macos.release           = "res://addons/anima_core/bin/libanimacoreextension.macos.release.framework"
+android.debug.arm64     = "res://addons/anima_core/bin/android/arm64-v8a/libanimacoreextension.so"
+android.release.arm64   = "res://addons/anima_core/bin/android/arm64-v8a/libanimacoreextension.so"
+android.debug.x86_64    = "res://addons/anima_core/bin/android/x86_64/libanimacoreextension.so"
+android.release.x86_64  = "res://addons/anima_core/bin/android/x86_64/libanimacoreextension.so"

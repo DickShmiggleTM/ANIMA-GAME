@@ -1,0 +1,78 @@
+# Godot
+anima-godot/.godot/
+anima-godot/android/build/.gradle/
+anima-godot/android/build/build/
+anima-godot/android/build/app/build/
+anima-godot/build/
+*.import
+*.uid
+
+# C++ build artifacts
+anima-core/build*/
+anima-core/bin/
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.lib
+*.exe
+
+# GDExtension binaries (built locally; not committed)
+anima-godot/addons/anima_core/bin/**/*.so
+anima-godot/addons/anima_core/bin/**/*.dll
+anima-godot/addons/anima_core/bin/**/*.dylib
+anima-godot/addons/anima_core/bin/**/*.framework
+!anima-godot/addons/anima_core/bin/**/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ML / Training artifacts (large; track with DVC or similar)
+anima-rl/models/checkpoints/
+anima-rl/models/best/
+anima-rl/data/logs/tensorboard/
+*.pt
+*.pth
+# Keep ONNX in godot project but not in rl training dir
+anima-rl/models/*.onnx
+
+# Telemetry logs
+anima-godot/android/
+user://telemetry/
+*.jsonl
+anima-tools/data/
+
+# Godot export temporaries
+*.apk
+*.aab
+!anima-godot/android/build/ANIMA*.apk
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# godot-cpp (fetched in CI)
+godot-cpp/
+
+# Keystore (never commit real keystores)
+*.jks
+release.keystore
+anima-godot/debug.keystore

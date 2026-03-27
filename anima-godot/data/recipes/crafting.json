@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "description": "Crafting recipes discoverable through experimentation.",
+  "recipes": [
+    {
+      "id": "campfire",
+      "inputs": ["wood_bundle", "stone"],
+      "output": "campfire",
+      "discovery_hint": "combine_heat",
+      "warmth_radius": 5.0,
+      "warmth_amount": 3.0,
+      "duration_ticks": 600
+    },
+    {
+      "id": "simple_shelter",
+      "inputs": ["wood_bundle", "wood_bundle"],
+      "output": "shelter",
+      "discovery_hint": "stack_materials",
+      "insulation_bonus": 0.3,
+      "max_occupants": 4
+    },
+    {
+      "id": "stone_tool",
+      "inputs": ["stone", "stone"],
+      "output": "sharp_stone",
+      "discovery_hint": "strike_stones",
+      "damage_bonus": 0.2
+    },
+    {
+      "id": "berry_mash",
+      "inputs": ["berry_purple", "berry_red"],
+      "output": "berry_mash",
+      "discovery_hint": "combine_food",
+      "nutrition_value": 0.45,
+      "hydration_value": 0.1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://resource_node"]
+
+[ext_resource type="Script" path="res://scripts/world/resource_node.gd" id="1_res"]
+
+[sub_resource type="SphereMesh" id="food_mesh"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="food_mat"]
+albedo_color = Color(0.2, 0.8, 0.2, 1)
+
+[sub_resource type="SphereShape3D" id="interact_shape"]
+radius = 1.2
+
+[node name="ResourceNode" type="Node3D"]
+script = ExtResource("1_res")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("food_mesh")
+surface_material_override/0 = SubResource("food_mat")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("interact_shape")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = false

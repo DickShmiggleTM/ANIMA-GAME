@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- ANIMA icon: stylized Zoi creature -->
+  <rect width="128" height="128" rx="24" fill="#1a2433"/>
+  <!-- Body -->
+  <rect x="44" y="56" width="40" height="44" rx="8" fill="#4a7c4e"/>
+  <!-- Head -->
+  <ellipse cx="64" cy="44" rx="22" ry="20" fill="#5a9460"/>
+  <!-- Eyes (glowing) -->
+  <circle cx="55" cy="42" r="5" fill="#ffffff"/>
+  <circle cx="73" cy="42" r="5" fill="#ffffff"/>
+  <circle cx="55" cy="42" r="3" fill="#00c8ff"/>
+  <circle cx="73" cy="42" r="3" fill="#00c8ff"/>
+  <!-- Ear-like horns -->
+  <path d="M46 28 L40 14 L52 24" fill="#3d6640"/>
+  <path d="M82 28 L88 14 L76 24" fill="#3d6640"/>
+  <!-- Neural glow aura -->
+  <circle cx="64" cy="64" r="60" fill="none" stroke="#00c8ff" stroke-width="2" opacity="0.3"/>
+  <!-- Text -->
+  <text x="64" y="118" text-anchor="middle" font-family="sans-serif"
+        font-weight="bold" font-size="14" fill="#00c8ff" opacity="0.9">ANIMA</text>
+</svg>
